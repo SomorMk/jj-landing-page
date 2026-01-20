@@ -8,10 +8,10 @@
     "shared/packages/*"
   ],
   "scripts": {
-    "build": "turbo run build",
+    "build": "node api.js && turbo run build",
     "dev-app": "turbo run dev --filter=@journey-jotter/journey-jotter",
     "dev-admin-dashboard": "turbo run dev --filter=@journey-jotter/admin-dashboard",
-    "dev": "turbo run dev",
+    "dev": "node api.js && turbo run dev",
     "lint": "turbo run lint",
     "install:journal-creator": "npm install --workspace=@journey-jotter/journal-creator-v2",
     "build:journal-creator": "npm run build --workspace=@journey-jotter/journal-creator-v2",
